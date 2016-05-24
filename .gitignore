@@ -1,0 +1,5 @@
+node_modules/
+mozilla/*.xpi
+mozilla/data/content_script.js
+chrome/content_script.js
+*.zip
