@@ -1,10 +1,11 @@
 {
   "title": "CBOSA-next",
   "name": "cbosa-next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add a few improvements of CBOSA",
   "main": "index.js",
   "author": "Adam Dobrawy",
+  "homepage": "https://github.com/ad-m/cbosa-next/",
   "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
