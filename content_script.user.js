@@ -58,19 +58,19 @@ function $1(selector, context){
     var [year, month, day] = word[word.length - 1].split('-');
     var current_month = month_lang[month - 1];
     return {
-      sygn: sygn, 
-      word: word, 
-      name: name, 
-      date: { year: year, month: month, day: day},
+      sygn: sygn,
+      word: word,
+      name: name,
+      date: { year: parseInt(year), month: parseInt(month), day: parseInt(day)},
       month_txt: current_month
     };
   }
-  
+
   var title_obj = parseTitle(document.title);
 
   // Set right page title
   document.title = `${title_obj.sygn} - ${title_obj.name} z dnia ${title_obj.date.day} ${title_obj.month_txt} ${title_obj.date.year} roku`;
-  
+
   var name = `${title_obj.name} z dnia ${title_obj.date.day} ${title_obj.month_txt} ${title_obj.date.year} roku w sprawie sygn. akt. ${title_obj.sygn}`;
 
   var war_header= $1('span.war_header');
@@ -134,7 +134,6 @@ function $1(selector, context){
               el('a', {'href': '#'}, [el.txt("[top]")])
             ]
           )
-          
         ]
       );
     document.body.appendChild(toolbar);
@@ -143,7 +142,7 @@ function $1(selector, context){
 
   var legitmate = isCurrentLegitimate();
   var bench = getBench();
-  
+
   insertToolbar(name, legitmate, bench.indexOf('Kamińska') > -1, bench.indexOf('Jaśkowska') > -1);
 
   function addLinks(text){
@@ -162,14 +161,14 @@ function $1(selector, context){
     item.style['text-indent'] = '25px';
     $$('p', item).forEach(styleParagraph);
   });
-  
+
   // Update content width
   $1('.tab').style.width = '95%';
   $1('.tab').style.margin = '0 auto';
   $1('.tab').style.paddingTop = '25px';
   $1('.tal').style.width = '960px';
   $1('.tal').style.maxWidth = '100%';
-  
+
   if(window.location.href.indexOf("breakpoint2") > -1) {
    alert("your url contains the name breakpoint2");
   }

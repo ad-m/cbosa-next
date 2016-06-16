@@ -1,6 +1,6 @@
  {
   "name": "CBOSA-next",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add a few improvements of CBOSA",
   "permissions": ["http://orzeczenia.nsa.gov.pl/", "activeTab"],
   "icons": { "16": "icon16.png",
