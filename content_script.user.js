@@ -148,7 +148,7 @@ function $1(selector, context){
   function addLinks(text){
     return text.replace('l OSK', 'I OSK')
       .replace(/<span class=\"highlight\">(.+?)<\/span>/g, '$1')
-      .replace(/[, ](([IV]* )*(FSK|(SA|SAB)\/(Wr|Wa|Lu|Go|Kr|Rz|Gl|Sz|Po|Op)|O(SK|PS|PK)|G(SK|PS)) ([0-9]+\/[0-9]+))/g, function (match, contents, offset, s) {
+      .replace(/([, \(]{0,1})(([IV]* )*(FSK|(SA|SAB)\/(Wr|Wa|Lu|Go|Kr|Rz|Gl|Sz|Po|Op)|O(SK|PS|PK)|G(SK|PS)) ([0-9]+\/[0-9]+))/g, function (match, prefix, contents) {
       return ' <a href=\'http://orzeczenia.nsa.gov.pl/cbo/find?q=SYGNATURA+[' + encodeURIComponent(contents) + ']\'>' + contents + '</a>';
     });
   }
